@@ -1,4 +1,4 @@
-package dsl.crossconf
+package dsl.crossconf.launch
 
 import android.annotation.SuppressLint
 import android.content.Intent
@@ -7,6 +7,7 @@ import android.os.Handler
 import android.os.Looper
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
+import dsl.crossconf.shared.Utils
 
 @SuppressLint("CustomSplashScreen")
 class LaunchActivity : AppCompatActivity() {
@@ -19,11 +20,11 @@ class LaunchActivity : AppCompatActivity() {
         val handler = Handler(Looper.myLooper()!!)
 
         val textVersion = findViewById<TextView>(R.id.textVersion)
-        textVersion.text = App.version
+        textVersion.text = Utils.version
 
         handler.postDelayed(
             {
-                startActivity(Intent(this, MainActivity::class.java))
+                startActivity(Intent(this, LaunchActivity::class.java))
                 finish()
             },
             duration

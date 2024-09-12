@@ -5,7 +5,7 @@ import android.os.Bundle
 import android.widget.Button
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
-import dsl.crossconf.shared.RandomUtils
+import dsl.crossconf.shared.Utils
 
 class MainActivity : AppCompatActivity() {
     @SuppressLint("MissingInflatedId")
@@ -17,7 +17,7 @@ class MainActivity : AppCompatActivity() {
 
         val button: Button = findViewById(R.id.button)
         button.setOnClickListener {
-            textView.text = RandomUtils.getRandom()
+            textView.text = Utils.getRandom()
         }
     }
 }
