@@ -15,5 +15,6 @@ dependencyResolutionManagement {
 
 rootProject.name = "CrossConf DSL"
 include ':app'
-include ':shared'
 include ':launch'
+include ':main'
+include ':shared'

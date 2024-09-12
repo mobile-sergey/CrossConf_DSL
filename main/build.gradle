@@ -4,7 +4,7 @@ plugins {
 }
 
 android {
-    namespace 'dsl.crossconf.launch'
+    namespace 'dsl.crossconf.main'
     compileSdk 34
 
     defaultConfig {
@@ -27,7 +27,6 @@ android {
 }
 
 dependencies {
-    implementation project(':main')
     implementation project(':shared')
     implementation 'androidx.core:core-ktx:1.13.1'
     implementation 'androidx.appcompat:appcompat:1.7.0'
