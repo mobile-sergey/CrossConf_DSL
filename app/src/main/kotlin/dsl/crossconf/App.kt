@@ -4,15 +4,16 @@ import android.app.Application
 import android.content.pm.PackageInfo
 import android.content.pm.PackageManager
 import android.os.Build
+import dsl.crossconf.shared.Utils
 
 class App : Application() {
 
     override fun onCreate() {
         super.onCreate()
-        version = getAppVersion()
+        Utils.version = getAppVersion()
     }
 
-    fun getAppVersion(): String {
+    private fun getAppVersion(): String {
         var pInfo: PackageInfo? = null
         try {
             val pm = packageManager
@@ -41,9 +42,5 @@ class App : Application() {
             version += pInfo.versionCode.toLong()
         }
         return version
-    }
-
-    companion object {
-        var version: String = ""
     }
 }
